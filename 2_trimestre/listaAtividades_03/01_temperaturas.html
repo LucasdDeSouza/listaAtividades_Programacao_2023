@@ -10,7 +10,27 @@
     */
 
     // Entrada
+    const Celsius = Number(prompt(`Insira a temperatura em graus Celsius`).trim().replace(",","."))
     
+    if( Number.isNaN(Celsius)){
+        document.write (`Apenas números seu burro do sherek`)
+    } 
+    else {
+
+    if (Celsius < 100) {
+        document.write (`A temperatura está muito baixa`)
+    }
+    else if (Celsius <= 200){
+        document.write (`A temperatura está baixa`)
+    }
+    else if (Celsius < 500){
+        document.write (`A temperatura está normal`)
+    }
+    else if (Celsius >= 500){
+        document.write (`A temperatura está muito alta`)
+    }
+}
+
     // Processamento
 
     // Saída
