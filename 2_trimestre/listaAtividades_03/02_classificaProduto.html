@@ -16,7 +16,25 @@
 
     Math.trunc(code);
     if (code === 1){
-        document.write(``)
+        document.write(`Alimento não-perecível`)
+    }
+    else if (code >= 2 && code <= 4){
+        document.write(`Alimento perecível`)
+    }
+    else if (code >= 5 && code <= 6){
+        document.write(`Vestuário`)
+    }
+    else if(code === 7){
+        document.write(`Higiene Pessoal`)
+    }
+    else if (code >= 8 && code <= 15){
+        document.write(`Limpeza e Utensílios Domésticos`)
+    }
+    else if (code >= 16 && code <= 20){
+        document.write(`Outros`)
+    }
+    else {
+        document.write(`Código Invalido. Apenas de 1 à 20`)
     }
 
 
