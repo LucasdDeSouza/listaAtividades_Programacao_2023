@@ -11,10 +11,26 @@
     Calcule e apresente o preço final do computador de acordo com a Forma de Pagamento.
     */
 
-    // Entrada
-    
-    // Processamento
+   const valor = Number(prompt(`Informe o valor do produto`).trim().replace(`,`,`.`))
+   const pagamento = prompt(`Informe a forma de pagamento.(B)Boleto, (D)Dinheiro e (P)Pix `).toLocaleUpperCase().trim()
 
-    // Saída
+   if (pagamento == `B`){
+    preco = valor - (valor * 0.03)
+    document.write(`O preço final do produto com o desconto da forma de pagamento é de ${preco}`)
+   }
+   else if (pagamento == `D`){
+    preco = valor - (valor * 0.05)
+    document.write(`O preço final do produto com o desconto da forma de pagamento é de ${preco}`)
+   }
+   else if (pagamento == `P`){
+    preco = valor - (valor * 0.10)
+    document.write(`O preço final do produto com o desconto da forma de pagamento é de ${preco}`)
+   }
+   else {
+    document.write(`Valor inválido. Informe em caixa alta, sem cifrão($) e sem letras`)
+   }
+
+
+
 
 </script>
