@@ -18,10 +18,28 @@
     Calcule os pontos e apresente a classificação do Professor.
     */
 
-    // Entrada
-    
-    // Processamento
+    const ano = Number(prompt(`Informe quantos anos de carreira possui`))
+    const pesquisa = Number(prompt(`Informe a quantidade de projeto de pesquisa já coordenou`))
+    const extensão = Number(prompt(`Informe a quantidade de projeto de extensão já orientou`))
+    const tcc = Number(prompt(`Informe a quantidade de TCCs já orientou`))
 
-    // Saída
 
+    ano1 = ano * 2.5
+    pesquisa1 = pesquisa * 5
+    extensão1 = extensão * 5
+    tcc1 = tcc * 3 
+    pontos = ano1 + pesquisa1 + extensão1 + tcc1
+
+    if(pontos <= 30){
+        document.write(`CONVIDADO`)
+    }
+    else if (pontos <= 50){
+        document.write(`AGREGADO`)
+    }
+    else if (pontos > 50){
+        document.write(`TITULAR`)
+    }
+    else {
+        document.write(`Coloque apenas números não precisamos de letras`)
+    }
 </script>
