@@ -11,10 +11,25 @@
     Calcule e apresente em tela o desconto, se existente, e o salário final recebido pelo funcionário.
     */
 
-    // Entrada
-    
-    // Processamento
+    const salario = Number(prompt(`Insira o valor do seu salário`).trim().replace(`,`,`.`))
+    const auxilio = (prompt(`Você gostaria de auxílio transporte? Responda com S(Sim) ou N(Não)`).toLocaleUpperCase().trim())
+    const próprio = (prompt(`Você utiliza algum veículo próprio para chegar ao trabalho? Responda com S(Sim) ou N(Não) `).toLocaleUpperCase().trim())
 
-    // Saída
+    if(auxilio == `S` && próprio == `S`){
+        remuneração = (salario * 0.06)
+        salario2 = salario - remuneração
+        document.write(`Então o seu salário terá uma remuneração de 6% ou ${remuneração}, e o salário final ficará ${salario2} reais`)
+    }
+    else if (auxilio == `S`){
+        salario2 = salario + 150
+        document.write(`Então o seu salário terá um aumento de 150 reais, e o salário final ficará ${salario2} reais`)
+    }
+    else if (próprio == `S`){
+        salario2 = salario + 200
+        document.write(`Então o seu salário terá um aumento de 200 reais, e o salário final ficará ${salario2} reais`)
+    }
+    else{
+        document.write(`Não precisamos de cifrões($), e responda as perguntas com S ou N`)
+    }
 
 </script>
