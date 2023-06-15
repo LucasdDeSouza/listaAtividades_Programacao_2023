@@ -18,19 +18,19 @@
     let conta = 0;
 
     if(Salario <= 2000){
-        conta = Salario - ((Salario * 15)/100)
+        conta = Salario + ((Salario * 15)/100)
         document.write(`O resultado do seu reajuste de salário de 15% resultou em ${conta}`)
     }
     else if(Salario > 2000 && Salario <= 4000 ){
-        conta = Salario - ((Salario * 10)/100)
+        conta = Salario + ((Salario * 10)/100)
         document.write(`O resultado do seu reajuste de salário de 10% resultou em ${conta}`)
     }
     else if(Salario > 4000 && Salario <= 7000 ){
-        conta = Salario - ((Salario * 7.5)/100)
+        conta = Salario + ((Salario * 7.5)/100)
         document.write(`O resultado do seu reajuste de salário de 7,5% resultou em ${conta}`)
     }
     else if(Salario > 7000){
-        conta = Salario - ((Salario * 7)/100)
+        conta = Salario + ((Salario * 7)/100)
         document.write(`O resultado do seu reajuste de salário de 7% resultou em ${conta}`)
     }
 

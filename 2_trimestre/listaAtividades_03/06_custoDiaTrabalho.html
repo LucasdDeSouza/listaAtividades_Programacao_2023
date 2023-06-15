@@ -14,10 +14,18 @@
     Apresente em tela o cargo do usuário e também o valor final recebido pelas viagens realizadas.
     */
 
-    // Entrada
+    const viagens = Number(prompt(`Insira a quantidade de viagens realizadas`))
+    const cargo = prompt(`Insira o seu cargo (M) para motorista e (C) para cobrador `).toUpperCase().trim()
+    var diaria = 100 * viagens
+    if(cargo == `M`){
+    cargo == `M` && viagens <= 10 ? diaria1 = diaria + ((diaria*20)/100) : diaria1 = diaria + ((diaria*35)/100)
+    document.write(`Você é motorista e fez ${viagens}, então você receberá ${diaria1} `)
+    }
+    else if (cargo == `C`){
+    cargo == `C` && viagens <= 10 ? diaria1 = diaria : diaria1 = diaria + ((diaria*10)/100)
+    document.write(`Você é cobrador e fez ${viagens}, então você receberá ${diaria1}`)
+    }
+
     
-    // Processamento
-
-    // Saída
-
+     
 </script>

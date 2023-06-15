@@ -10,10 +10,24 @@
     - Se a viagem demorar mais de 20 dias, indique que o usuário "Deverá Trabalhar Remoto". Apresente o resultado correspondente com os dias de duração da viagem.
     */
 
-    // Entrada
-    
-    // Processamento
+   const Km = Number(prompt(`Insira a distância da viagem em Km(Quilômetros)`).trim().replace(",","."))
+   const KmDia = Number(prompt(`Insira a quantidade de km que você pretende viajar por dia`).trim().replace(",",".")) 
+   const Dias = Km / KmDia
 
-    // Saída
+   if(Dias <= 3){
+    document.write(`Essa viagem poderá ser realizada em qualquer período`)
+   }
+   else if(Dias <= 10){
+    document.write(`Essa viagem poderá ser realizada nas férias de julho`)
+   }
+   else if(Dias <= 20 ){
+    document.write(`Essa viagem poderá ser realizada nas férias de verão`)
+   }
+   else if(Dias > 20){
+    document.write(`Para realizar essa viagem você deverá trabalhar remoto, pois deu ${Dias} dias`)
+   }
+   else {
+    document.write(`Coloque apenas os números`)
+   }
 
 </script>

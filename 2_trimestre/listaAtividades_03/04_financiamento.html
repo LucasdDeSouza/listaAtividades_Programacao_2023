@@ -8,5 +8,30 @@
     
     Calcule e apresente o valor da parcela ao final do programa e informe se o financiamento foi ou não concedido ao interessado.
     */
-
+    const preco = Number(prompt(`Insira o valor do imovel`).trim().replace(",","."))
+   const tempo = Number(prompt(`Insira a quantidade de prestrações em meses (Pode parcelar até 360 meses)`).trim().replace(",","."))
+   const salario = Number(prompt(`Insira o valor do seu salário`).trim().replace(",","."))
    
+   const vezes = preco / tempo 
+   const taxa = vezes * 0.02
+   const final = vezes + taxa
+   const porcentagem = (salario*30)/100
+   
+
+   if (tempo <= 360){
+   if (final <= porcentagem){
+    document.write (`O valor da parcela será de ${final}, e o financiamento será concedido`)
+   }
+   else if (final > porcentagem){
+    document.write (`O valor da parcela será de ${final}, e o financiamento não será concedido`)
+   }
+   else {
+    document.write (`Coloque apenas os números, não precisamos de letras ou cifrões`)
+   }
+   } else {
+    document.write(`Você só pode parcelar até 360 meses, ou quer ficar pagando a vida inteira?`)
+   }
+
+''
+   
+</script>
