@@ -11,10 +11,25 @@
     Apresente o destino final e o custo final da viagem para o destino.
     */
 
-    // Entrada
-    
-    // Processamento
+    const rio = Number(prompt(`Informe o valor da passsagem de avião para o Rio de Janeiro`))
+    const sp = Number(prompt(`Informe o valor da passagem de avião para São Paulo`))
+    const rio2 = Number(prompt(`Informe o valor do hotel no Rio de Janeiro`))
+    const sp2 = Number(prompt(`Informe o valor do hotel em São Paulo `))
+    const dias = Number(prompt(`Informe a quantidade de dias que pretende ficar no destino`))
 
-    // Saída
+    rio3 = rio + (rio2 * dias)
+    sp3 = sp + (sp2 * dias)
 
+    if (sp3 > rio3) {
+        document.write(`O destino mais barato será o Rio de Janeiro, custando ${rio3} reais`)
+    }
+    else if (sp3 < rio3) {
+        document.write(`O destino mais barato será São Paulo, custando ${sp3} reais`)
+    }
+    else if (sp3 = rio3){
+        document.write(`Não há destino mais barato, pois os dois destinos darão ${rio3} reais`)
+    }
+    else {
+        document.write(`Valor Inválido`)
+    }
 </script>
